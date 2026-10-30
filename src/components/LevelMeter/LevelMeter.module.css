@@ -1,0 +1,48 @@
+.meter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.track {
+  position: relative;
+  flex: 1;
+  height: 14px;
+  background: var(--md-sys-color-surface-container-high);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    var(--md-ext-color-success) 0 70%,
+    var(--md-ext-color-warning) 70% 90%,
+    var(--md-sys-color-error) 90%
+  );
+}
+
+.peak {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--md-sys-color-on-surface);
+}
+
+.threshold {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--md-sys-color-primary);
+}
+
+.readout {
+  width: 170px;
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  color: var(--md-sys-color-on-surface-variant);
+}

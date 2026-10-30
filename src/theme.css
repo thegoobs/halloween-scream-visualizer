@@ -1,0 +1,59 @@
+/* Theme: Material 3 color roles (dark scheme), seeded from pumpkin orange for Halloween.
+   Stylesheets use these variables instead of raw colors; canvas code reads them through
+   theme.js. To re-skin the app, change the values here.
+
+   Three families cover the page, plus a few supporting roles:
+   - primary   pumpkin orange: the "loud" color (hot bones, threshold line, popup accent)
+   - secondary purple: the volume line
+   - neutral   backgrounds, surfaces, text and outlines
+   - tertiary  bone cream; error red; extended success/warning for the level meter */
+:root {
+  color-scheme: dark;
+
+  /* Primary */
+  --md-sys-color-primary: #ff8a1f;
+  --md-sys-color-on-primary: #4a2200;
+  --md-sys-color-primary-container: #1b1209; /* kept near-black so the popup card stays dark */
+  --md-sys-color-on-primary-container: #ff8a1f;
+
+  /* Secondary */
+  --md-sys-color-secondary: #b36bff;
+  --md-sys-color-on-secondary: #2e0b5c;
+  --md-sys-color-secondary-container: #3a2459;
+  --md-sys-color-on-secondary-container: #e5d0ff;
+
+  /* Tertiary (bone) */
+  --md-sys-color-tertiary: #f4ecd6;
+  --md-sys-color-on-tertiary: #3a3320;
+  --md-sys-color-tertiary-container: #4d4630;
+  --md-sys-color-on-tertiary-container: #f4ecd6;
+
+  /* Error */
+  --md-sys-color-error: #ff6b6b;
+  --md-sys-color-on-error: #4d0b0b;
+  --md-sys-color-error-container: #5c1a1a;
+  --md-sys-color-on-error-container: #ffdad6;
+
+  /* Neutral */
+  --md-sys-color-background: #0b0d10;
+  --md-sys-color-on-background: #e6e8eb;
+  --md-sys-color-surface: #0b0d10;
+  --md-sys-color-on-surface: #e6e8eb;
+  --md-sys-color-surface-variant: #2e353f;
+  --md-sys-color-on-surface-variant: #9aa4b0;
+  --md-sys-color-surface-container-lowest: #0a0610; /* chart background */
+  --md-sys-color-surface-container-low: #0f1216;
+  --md-sys-color-surface-container: #14181d; /* settings flyout */
+  --md-sys-color-surface-container-high: #1a1e24; /* inputs, buttons, meter track */
+  --md-sys-color-surface-container-highest: #2a3038; /* hover */
+  --md-sys-color-outline: #6b7684;
+  --md-sys-color-outline-variant: #2e353f;
+  --md-sys-color-inverse-surface: #e6e8eb;
+  --md-sys-color-inverse-on-surface: #14181d;
+  --md-sys-color-scrim: #0a0610;
+  --md-sys-color-shadow: #000;
+
+  /* Extended roles (not part of M3's baseline): level meter zones */
+  --md-ext-color-success: #2ecc71;
+  --md-ext-color-warning: #f1c40f;
+}

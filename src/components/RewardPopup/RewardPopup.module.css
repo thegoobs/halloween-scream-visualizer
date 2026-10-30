@@ -1,0 +1,69 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--md-sys-color-scrim) 75%, transparent);
+  animation: fade 0.2s ease-out;
+}
+
+.card {
+  position: relative;
+  overflow: hidden; /* clips the timer bar to the rounded corners */
+  text-align: center;
+  padding: 40px 64px;
+  border: 4px solid var(--md-sys-color-primary);
+  border-radius: 24px;
+  background: var(--md-sys-color-primary-container);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--md-sys-color-primary) 60%, transparent);
+  animation: pop 0.5s cubic-bezier(0.2, 1.6, 0.4, 1);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: clamp(32px, 8vw, 96px);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.card p {
+  margin: 12px 0 0;
+  font-size: clamp(20px, 3vw, 40px);
+}
+
+.emoji {
+  font-size: clamp(64px, 14vw, 160px);
+  line-height: 1;
+}
+
+/* Time remaining: a faint bar that drains left to right over the popup's lifetime. */
+.timer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: var(--md-sys-color-primary);
+  opacity: 0.45;
+  transform-origin: left;
+  animation: drain linear forwards;
+}
+
+@keyframes drain {
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.3) rotate(-8deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
